@@ -1,30 +1,32 @@
-#
-
+# Node
+node_modules/
+.idea/
+*.iml
 
 # WordPress #
 ############
-wp-config.php
-wp-config-local.php
-wp-cli.local.yml
-wp-content/uploads
-wp-content/blogs.dir/
-wp-content/upgrade/
-wp-content/backup-db/
-wp-content/updraft/
-wp-content/backupwordpress-*/
-wp-content/managewp/backups/
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
-sitemap.xml
-sitemap.xml.gz
+api/wp-config.php
+api/wp-config-local.php
+api/wp-cli.local.yml
+api/wp-content/uploads
+api/wp-content/blogs.dir/
+api/wp-content/upgrade/
+api/wp-content/backup-db/
+api/wp-content/updraft/
+api/wp-content/backupwordpress-*/
+api/wp-content/managewp/backups/
+api/wp-content/advanced-cache.php
+api/wp-content/wp-cache-config.php
+api/sitemap.xml
+api/sitemap.xml.gz
 
 # InteliJ #
 ###########
 .idea
 
 # @TODO writable paths
-wp-content/cache/
-wp-content/backups/
+api/wp-content/cache/
+api/wp-content/backups/
 
 # Packages #
 ############
