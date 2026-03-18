@@ -1,0 +1,9 @@
+.output {
+  color: var(--text);
+  margin: 4px 0 16px 0;
+  line-height: 1.7;
+}
+
+.dim {
+  color: var(--text-dim);
+}
