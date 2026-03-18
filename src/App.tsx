@@ -1,35 +1,27 @@
 import React from "react";
+import { TerminalWindow } from "./components";
+import { PromptLine } from "./components";
+import { Output } from "./components";
+import { useTypewriter } from "./hooks/useTypewriter";
 import "./App.css";
 
 function App() {
+  const line1 = useTypewriter("whoami", 60, 300);
+  const line2 = useTypewriter(
+    "Software Engineer. 19 years building things that matter.",
+    30,
+    1200
+  );
+  const showCursor = line2.length > 0;
+
   return (
-    <div className="terminal-window">
-      <div className="terminal-header">
-        <span className="terminal-dot red" />
-        <span className="terminal-dot yellow" />
-        <span className="terminal-dot green" />
-        <span className="terminal-title">zeke@swepson:~</span>
-      </div>
-      <div className="terminal-body">
-        <p className="prompt">
-          <span className="prompt-user">zeke@swepson</span>
-          <span className="prompt-sep">:</span>
-          <span className="prompt-path">~</span>
-          <span className="prompt-dollar">$</span>
-          <span className="prompt-cmd"> whoami</span>
-        </p>
-        <p className="output">
-          Software Engineer. 19 years building things that matter.
-        </p>
-        <p className="prompt">
-          <span className="prompt-user">zeke@swepson</span>
-          <span className="prompt-sep">:</span>
-          <span className="prompt-path">~</span>
-          <span className="prompt-dollar">$</span>
-          <span className="cursor">▋</span>
-        </p>
-      </div>
-    </div>
+    <main className="app">
+      <TerminalWindow>
+        <PromptLine command={line1} />
+        {line2 && <Output>{line2}</Output>}
+        {showCursor && <PromptLine showCursor />}
+      </TerminalWindow>
+    </main>
   );
 }
 
