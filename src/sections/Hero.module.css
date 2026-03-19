@@ -8,6 +8,7 @@
 
 .window {
   width: 760px;
+  min-width: 300px;
 }
 
 .body {
