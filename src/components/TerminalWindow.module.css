@@ -37,3 +37,9 @@
   padding: 20px 24px;
   min-height: 120px;
 }
+
+@media (max-width: 600px) {
+  .header {
+    display: none;
+  }
+}

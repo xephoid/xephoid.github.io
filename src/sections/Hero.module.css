@@ -7,7 +7,7 @@
 }
 
 .window {
-  width: min(760px, 100%);
+  width: 760px;
 }
 
 .body {
@@ -75,6 +75,22 @@
 }
 
 @media (max-width: 600px) {
-  .body { padding: 16px; }
-  .nav  { gap: 8px; }
+  .hero {
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  /* Hide the terminal chrome (border, shadow, header dots) on mobile */
+  .window {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .body {
+    padding: 20px 16px;
+  }
+
+  .nav { gap: 8px; }
 }
