@@ -1,0 +1,175 @@
+.section {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.prompt { font-family: var(--font-mono); }
+.user   { color: var(--green); }
+.sep    { color: var(--text-dim); }
+.path   { color: var(--blue); }
+.dollar { color: var(--text); margin: 0 6px; }
+.cmd    { color: var(--text); }
+
+/* Post list */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.postCard {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  background: var(--bg-terminal);
+  cursor: pointer;
+  transition: border-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.postCard:hover {
+  border-color: var(--green);
+}
+
+.postMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.postDate {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+}
+
+.postTags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.75rem;
+  color: var(--green);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 2px 6px;
+  font-family: var(--font-mono);
+}
+
+.postTitle {
+  color: var(--yellow);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.postExcerpt {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.readMore {
+  color: var(--blue);
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  margin-top: 0.25rem;
+}
+
+.readMore .dollar {
+  color: var(--text-dim);
+  margin: 0 3px 0 0;
+}
+
+/* Post view */
+.postView {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.back {
+  background: none;
+  border: none;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  transition: color 0.15s;
+}
+
+.back:hover {
+  color: var(--yellow);
+}
+
+.back .dollar {
+  color: var(--text-dim);
+  margin: 0 6px 0 0;
+}
+
+/* Markdown content styling */
+.postContent {
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.postContent h1 {
+  color: var(--yellow);
+  font-size: 1.5rem;
+  margin: 0 0 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+}
+
+.postContent h2 {
+  color: var(--green);
+  font-size: 1.1rem;
+  margin: 2rem 0 0.75rem 0;
+}
+
+.postContent p {
+  color: var(--text-dim);
+  margin: 0 0 1rem 0;
+}
+
+.postContent ul, .postContent ol {
+  color: var(--text-dim);
+  margin: 0 0 1rem 1.5rem;
+}
+
+.postContent li {
+  margin-bottom: 0.4rem;
+  line-height: 1.7;
+}
+
+.postContent strong {
+  color: var(--text);
+}
+
+.postContent code {
+  background: var(--bg);
+  color: var(--green);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+}
