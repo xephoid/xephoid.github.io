@@ -1,0 +1,81 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.window {
+  width: 100%;
+  max-width: 760px;
+}
+
+.body {
+  padding: 24px;
+  min-height: 300px;
+}
+
+.prompt {
+  margin-bottom: 2px;
+  line-height: 1.8;
+}
+
+.output {
+  margin: 2px 0 14px 2ch;
+  line-height: 1.6;
+}
+
+.user   { color: var(--green); }
+.sep    { color: var(--text-dim); }
+.path   { color: var(--blue); }
+.dollar { color: var(--text); margin: 0 6px; }
+.cmd    { color: var(--text); }
+.val    { color: var(--yellow); }
+
+.cursor {
+  display: inline-block;
+  color: var(--cursor);
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.nav {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  animation: fadeIn 0.5s ease;
+}
+
+.navLink {
+  color: var(--green);
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.navLink:hover {
+  border-color: var(--green);
+  background: rgba(57, 255, 20, 0.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .body { padding: 16px; }
+  .nav  { gap: 8px; }
+}
