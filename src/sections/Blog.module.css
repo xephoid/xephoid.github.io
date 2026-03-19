@@ -74,7 +74,7 @@
 }
 
 .postExcerpt {
-  color: var(--text-dim);
+  color: var(--text);
   font-size: 0.9rem;
   line-height: 1.6;
   margin: 0;
@@ -141,12 +141,12 @@
 }
 
 .postContent p {
-  color: var(--text-dim);
+  color: var(--text);
   margin: 0 0 1rem 0;
 }
 
 .postContent ul, .postContent ol {
-  color: var(--text-dim);
+  color: var(--text);
   margin: 0 0 1rem 1.5rem;
 }
 
