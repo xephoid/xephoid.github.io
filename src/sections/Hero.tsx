@@ -18,10 +18,9 @@ const SEQUENCE = [
 ];
 
 const NAV = [
-  { cmd: "cd ./experience", href: "#experience" },
-  { cmd: "cd ./projects",   href: "#projects"   },
-  { cmd: "cd ./blog",       href: "#blog"        },
-  { cmd: "cd ./contact",    href: "#contact"     },
+  { cmd: "cd ./work-with-me", href: "#work-with-me" },
+  { cmd: "cd ./experience",   href: "#experience"   },
+  { cmd: "cd ./projects",     href: "#projects"     },
 ];
 
 export function Hero() {
