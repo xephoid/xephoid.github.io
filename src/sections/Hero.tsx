@@ -47,14 +47,16 @@ export function Hero() {
             </p>
           ))}
 
-          {/* Blinking cursor after sequence */}
-          <p className={styles.prompt}>
-            <span className={styles.user}>zeke@swepson</span>
-            <span className={styles.sep}>:</span>
-            <span className={styles.path}>~</span>
-            <span className={styles.dollar}>$</span>
-            <span className={styles.cursor}>▋</span>
-          </p>
+          {/* Blinking cursor — only show after sequence is complete */}
+          {done && (
+            <p className={styles.prompt}>
+              <span className={styles.user}>zeke@swepson</span>
+              <span className={styles.sep}>:</span>
+              <span className={styles.path}>~</span>
+              <span className={styles.dollar}>$</span>
+              <span className={styles.cursor}>▋</span>
+            </p>
+          )}
 
           {/* Nav links shown after sequence completes */}
           {done && (
