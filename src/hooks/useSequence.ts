@@ -5,6 +5,7 @@ export interface SequenceLine {
   text: string;
   speed?: number;
   pauseAfter?: number;
+  instant?: boolean;
 }
 
 export interface SequenceState {
@@ -34,6 +35,15 @@ export function useSequence(sequence: SequenceLine[]): SequenceState {
     }
 
     if (charIndex === 0) {
+      // Instant lines appear fully immediately
+      if (current.instant) {
+        setLines((prev) => [
+          ...prev,
+          { prompt: current.prompt ?? false, text: current.text, done: true },
+        ]);
+        setPausing(true);
+        return;
+      }
       setLines((prev) => [
         ...prev,
         { prompt: current.prompt ?? false, text: "", done: false },

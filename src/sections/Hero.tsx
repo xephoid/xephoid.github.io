@@ -3,14 +3,18 @@ import { TerminalWindow } from "../components";
 import styles from "./Hero.module.css";
 
 const SEQUENCE = [
-  { prompt: true,  text: "whoami",                                          speed: 80,  pauseAfter: 300 },
-  { prompt: false, text: "Zeke Swepson",                                    speed: 40,  pauseAfter: 500 },
-  { prompt: true,  text: "cat role.txt",                                    speed: 80,  pauseAfter: 300 },
-  { prompt: false, text: "Software Engineer & Engineering Lead — 19 years", speed: 30,  pauseAfter: 500 },
-  { prompt: true,  text: "ls skills/",                                      speed: 80,  pauseAfter: 300 },
-  { prompt: false, text: "node.js   react   typescript   postgres   aws",   speed: 25,  pauseAfter: 600 },
-  { prompt: true,  text: "cat location.txt",                                speed: 80,  pauseAfter: 300 },
-  { prompt: false, text: "San Francisco, CA — open to remote",              speed: 30,  pauseAfter: 800 },
+  { prompt: true,  text: "whoami",                                                        speed: 80, pauseAfter: 300 },
+  { prompt: false, text: "Zeke Swepson",                                                  instant: true, pauseAfter: 500 },
+  { prompt: true,  text: "cat role.txt",                                                  speed: 80, pauseAfter: 300 },
+  { prompt: false, text: "Engineering Lead · 19 years · Open to full-time & fractional",  instant: true, pauseAfter: 500 },
+  { prompt: true,  text: "ls languages/",                                                 speed: 80, pauseAfter: 200 },
+  { prompt: false, text: "node.js   react   typescript   python   java   scala",          instant: true, pauseAfter: 300 },
+  { prompt: true,  text: "ls infra/",                                                     speed: 80, pauseAfter: 200 },
+  { prompt: false, text: "aws   gcp   docker   postgres   mysql   redis   heroku",        instant: true, pauseAfter: 300 },
+  { prompt: true,  text: "ls tools/",                                                     speed: 80, pauseAfter: 200 },
+  { prompt: false, text: "auth0   twilio   openai   jenkins   cypress   jira",            instant: true, pauseAfter: 500 },
+  { prompt: true,  text: "cat location.txt",                                              speed: 80, pauseAfter: 300 },
+  { prompt: false, text: "San Francisco, CA · remote-friendly",                           instant: true, pauseAfter: 800 },
 ];
 
 const NAV = [
