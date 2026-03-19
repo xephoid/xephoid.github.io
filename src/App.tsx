@@ -1,4 +1,3 @@
-import React from "react";
 import { TerminalWindow } from "./components";
 import { PromptLine } from "./components";
 import { Output } from "./components";
