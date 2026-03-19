@@ -42,4 +42,8 @@
   .header {
     display: none;
   }
+
+  .body {
+    padding: 0;
+  }
 }
