@@ -7,8 +7,8 @@
 }
 
 .window {
-  width: 100%;
-  max-width: 760px;
+  width: 760px;
+  max-width: 100%;
 }
 
 .body {
