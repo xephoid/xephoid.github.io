@@ -7,7 +7,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint src --ext ts,tsx",
-    "deploy": "npm run build && rm -rf docs && cp -r dist docs"
+    "deploy": "npm run build"
   },
   "dependencies": {
     "react": "^18.3.1",
