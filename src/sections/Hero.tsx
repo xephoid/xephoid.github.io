@@ -22,6 +22,8 @@ const NAV = [
   { cmd: "cd ./work-with-me", href: "#work-with-me" },
   { cmd: "cd ./projects",     href: "#projects"     },
   { cmd: "cd ./blog",         href: "#blog"         },
+  { cmd: "open linkedin",     href: "https://linkedin.com/in/zeke-swepson-6bb2944", external: true },
+  { cmd: "open github",       href: "https://github.com/xephoid", external: true },
 ];
 
 export function Hero() {
@@ -61,8 +63,13 @@ export function Hero() {
           {/* Nav links shown after sequence completes */}
           {done && (
             <nav className={styles.nav}>
-              {NAV.map(({ cmd, href }) => (
-                <a key={href} href={href} className={styles.navLink}>
+              {NAV.map(({ cmd, href, external }) => (
+                <a
+                  key={href}
+                  href={href}
+                  className={styles.navLink}
+                  {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                >
                   <span className={styles.dollar}>$</span> {cmd}
                 </a>
               ))}

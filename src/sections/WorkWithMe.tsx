@@ -48,6 +48,12 @@ export function WorkWithMe() {
           <a href="mailto:contact@zekeswepson.com" className={styles.ctaLink}>
             <span className={styles.dollar}>$</span> contact@zekeswepson.com
           </a>
+          <a href="https://linkedin.com/in/zeke-swepson-6bb2944" target="_blank" rel="noopener noreferrer" className={styles.ctaLink}>
+            <span className={styles.dollar}>$</span> linkedin.com/in/zeke-swepson-6bb2944
+          </a>
+          <a href="https://github.com/xephoid" target="_blank" rel="noopener noreferrer" className={styles.ctaLink}>
+            <span className={styles.dollar}>$</span> github.com/xephoid
+          </a>
         </div>
       </div>
     </section>
