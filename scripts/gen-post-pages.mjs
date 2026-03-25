@@ -22,16 +22,19 @@ function parseFrontmatter(src) {
 
 for (const file of readdirSync(postsDir).filter((f) => f.endsWith(".md"))) {
   const slug = basename(file, ".md");
-  const { title, excerpt } = parseFrontmatter(
+  const { title, excerpt, image } = parseFrontmatter(
     readFileSync(join(postsDir, file), "utf8")
   );
   const postUrl = `${baseUrl}/post/${slug}`;
+  const ogImage = image ? `${baseUrl}${image}` : `${baseUrl}/zeke.jpg`;
 
   const html = baseHtml
     .replace(/(<meta property="og:title"[^>]*content=")[^"]*(")/,      `$1${title}$2`)
     .replace(/(<meta property="og:description"[^>]*content=")[^"]*(")/,`$1${excerpt}$2`)
     .replace(/(<meta property="og:url"[^>]*content=")[^"]*(")/,        `$1${postUrl}$2`)
     .replace(/(<meta property="og:type"[^>]*content=")[^"]*(")/,       `$1article$2`)
+    .replace(/(<meta property="og:image"[^>]*content=")[^"]*(")/,      `$1${ogImage}$2`)
+    .replace(/(<meta name="twitter:image"[^>]*content=")[^"]*(")/,     `$1${ogImage}$2`)
     .replace(/(<title>)[^<]*(<\/title>)/,                               `$1${title}$2`);
 
   const dir = join(outDir, "post", slug);
