@@ -155,6 +155,10 @@
   line-height: 1.7;
 }
 
+.postContent a {
+  color: var(--blue);
+}
+
 .postContent strong {
   color: var(--text);
 }

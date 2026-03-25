@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { attributes as post1Attrs, html as post1Html } from "../posts/ai-assisted-development.md";
 import { attributes as post2Attrs, html as post2Html } from "../posts/my-life-with-an-ai-assistant.md";
 import styles from "./Blog.module.css";
@@ -25,9 +25,50 @@ const posts: PostMeta[] = [
   },
 ];
 
+function getSlugFromUrl(): string | null {
+  const pathMatch = window.location.pathname.match(/^\/post\/([^/]+)/);
+  const slug = pathMatch
+    ? pathMatch[1]
+    : new URLSearchParams(window.location.search).get("post");
+  return posts.some((p) => p.slug === slug) ? slug : null;
+}
+
 export function Blog() {
-  const [activeSlug, setActiveSlug] = useState<string | null>(null);
+  const [activeSlug, setActiveSlug] = useState<string | null>(getSlugFromUrl);
   const activePost = posts.find((p) => p.slug === activeSlug);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  // Open all links in post content in a new tab
+  useEffect(() => {
+    contentRef.current?.querySelectorAll("a").forEach((a) => {
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+    });
+  }, [activeSlug]);
+
+  // Scroll to blog section when arriving via a direct post link
+  useEffect(() => {
+    if (activeSlug) {
+      document.getElementById("blog")?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
+  // Sync state when browser back/forward is used
+  useEffect(() => {
+    const onPopState = () => setActiveSlug(getSlugFromUrl());
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
+
+  function openPost(slug: string) {
+    history.pushState({}, "", "/post/" + slug);
+    setActiveSlug(slug);
+  }
+
+  function closePost() {
+    history.pushState({}, "", "/");
+    setActiveSlug(null);
+  }
 
   return (
     <section id="blog" className={styles.section}>
@@ -47,7 +88,7 @@ export function Blog() {
             <div
               key={post.slug}
               className={styles.postCard}
-              onClick={() => setActiveSlug(post.slug)}
+              onClick={() => openPost(post.slug)}
               role="button"
             >
               <div className={styles.postMeta}>
@@ -70,7 +111,7 @@ export function Blog() {
         <div className={styles.postView}>
           <button
             className={styles.back}
-            onClick={() => setActiveSlug(null)}
+            onClick={closePost}
           >
             <span className={styles.dollar}>$</span> cd ..
           </button>
@@ -83,6 +124,7 @@ export function Blog() {
             </div>
           </div>
           <div
+            ref={contentRef}
             className={styles.postContent}
             dangerouslySetInnerHTML={{ __html: activePost.html }}
           />
