@@ -7,11 +7,11 @@ const baseHtml = readFileSync(join(outDir, "index.html"), "utf8");
 const baseUrl = "https://zekeswepson.com";
 
 function parseFrontmatter(src) {
-  const m = src.match(/^---\n([\s\S]+?)\n---/);
+  const m = src.match(/^---\r?\n([\s\S]+?)\r?\n---/);
   if (!m) return {};
   return Object.fromEntries(
     m[1]
-      .split("\n")
+      .split(/\r?\n/)
       .filter(Boolean)
       .map((line) => {
         const [k, ...v] = line.split(":");
