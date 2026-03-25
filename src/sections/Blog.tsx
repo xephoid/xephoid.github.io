@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { attributes as post1Attrs, html as post1Html } from "../posts/ai-assisted-development.md";
+import { attributes as post2Attrs, html as post2Html } from "../posts/my-life-with-an-ai-assistant.md";
 import styles from "./Blog.module.css";
 
 interface PostMeta {
@@ -16,6 +17,11 @@ const posts: PostMeta[] = [
     ...(post1Attrs as { title: string; date: string; tags: string[]; excerpt: string }),
     html: post1Html,
     slug: "ai-assisted-development",
+  },
+  {
+    ...(post2Attrs as { title: string; date: string; tags: string[]; excerpt: string }),
+    html: post2Html,
+    slug: "my-life-with-an-ai-assistant",
   },
 ];
 
