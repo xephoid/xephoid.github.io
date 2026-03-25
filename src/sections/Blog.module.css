@@ -155,7 +155,8 @@
   line-height: 1.7;
 }
 
-.postContent a {
+.postContent a,
+.postContent a:visited {
   color: var(--blue);
 }
 

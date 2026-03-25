@@ -25,9 +25,9 @@ I happened to have one handy. I dug a 2014 Mac Mini out of my closet—gathering
 
 ## My New Chief of Staff
 
-Once the Mac Mini hummed to life, I gave the assistant its first real mission: triage the firehose of job alerts hitting my inbox every morning. If you've ever been on the job hunt, you know the grind. Dozens of alerts a day, each requiring me to open the link, wait for the page to load, and scan for my two non-negotiables: the right tech stack and a minimum base salary. Sometimes that information is front-and-center; sometimes it's buried in paragraph six; often it isn't listed at all.
+Once the Mac Mini hummed to life, I gave the assistant its first real mission: triage the firehose of job alerts hitting my inbox every morning. If you've ever been on the job hunt, you may have experienced this. Dozens of alerts a day, each requiring me to open the link and scan for my non-negotiables: hybrid or remote work, the right tech stack and a minimum base salary. Sometimes that information is front-and-center; sometimes it's buried in paragraph six; sometimes it isn't listed at all.
 
-With OpenClaw, that mental tax vanished. I forwarded the alerts, and it did the scanning in seconds. When a LinkedIn post was vague, the assistant would autonomously hunt down the original company career page or search third-party databases to fill in the gaps. For the first time in months, I wasn't the one doing the grunt work — I had an assistant that actually understood what I was looking for after 19 years in the industry, and was filtering out the noise while I focused on things that mattered.
+With OpenClaw, that mental tax vanished. I forwarded the alerts, and it did the scanning in seconds. When a LinkedIn post was vague, the assistant would autonomously hunt down the original company career page or search third-party databases to fill in the gaps. For the first time in months, I wasn't the one doing the grunt work — I had an assistant that actually understood what I was looking for, and was filtering out the noise while I focused on things that mattered.
 
 ---
 
@@ -45,9 +45,9 @@ The logical next thought for any engineer: *I'll just build it myself and run it
 
 Every engineer with a decent gaming PC eventually reaches the same conclusion: "Why am I paying for tokens when I have a powerful machine right here?" I had a modern PC and some experience with local AI experiments. I was wrong.
 
-Think of running a local AI model like building a robot from a kit. The whole thing arrives in one box — and if all the parts fit, you're off to the races. But if the kit is too big for the box, you realize halfway through that you're missing pieces and have to order the rest separately. Now you're not building anymore, you're just waiting for deliveries. That's what happens when an AI model is too big for your graphics card: the overflow gets fetched from slower memory on demand, and everything [falls off a cliff](https://hackernoon.com/optimizing-local-llm-inference-for-8gb-vram-gpus). I was waiting 10 minutes for a single "Received" reply, my PC fans screaming, just to confirm the inbox was empty.
+Think of running a local AI model like building a robot from a kit you order online. The key is it all needs to arrive in one box, if that is the case you're off to the races. But if the kit is too big for the box, you realize halfway through that you're missing pieces and have to order the rest separately. Now you're not building anymore, you're just waiting for deliveries. That's what happens when an AI model is too big for your graphics card: the overflow gets fetched from slower memory on demand, and everything [falls off a cliff](https://hackernoon.com/optimizing-local-llm-inference-for-8gb-vram-gpus). I was waiting 10 minutes for a single "Received" reply, my PC fans screaming, just to confirm the inbox was empty.
 
-To make matters worse, when I asked OpenClaw itself which local models my hardware could handle, it confidently recommended one that was physically impossible to run. I spent hours chasing a hallucination.
+To make matters worse, when I asked OpenClaw itself which local models my hardware could handle, it confidently recommended one that was biologically impossible to run. I spent hours chasing a hallucination.
 
 I looked into "AI-optimized Mini PCs" next and found them to be mostly smoke and mirrors—the NPUs in current models are [effectively worthless](https://www.virtualizationhowto.com/2025/09/npus-in-mini-pcs-are-worthless-for-a-home-lab-heres-why/) for anything serious. The card that actually does the job, the RTX 3090, now regularly [sells for over $1,200](https://www.reddit.com/r/LocalLLaMA/comments/1prjldr/whats_the_realistic_entry_point_for_a_good_local/). For that price, I could pay cloud fees for years.
 
@@ -63,7 +63,7 @@ For the rest of us, it's a terrifyingly expensive hobby. It's the first software
 
 Am I going to keep using it? Probably. Because despite the bank notifications and 10-minute loading screens, there's something undeniably intoxicating about watching a machine try to do your job. Even if, for now, it's mostly just speed-running the deletion of your faith in technology.
 
-If you have a $1,200 graphics card and a dark sense of humor, give it a try. If not — well, those LinkedIn alerts aren't going to scan themselves. Yet.
+If you have the money to throw away and a dark sense of humor, give it a try. If not, well, those LinkedIn alerts aren't going to scan themselves. Yet.
 
 ---
 
