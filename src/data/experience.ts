@@ -8,9 +8,27 @@ export interface Role {
 
 export const experience: Role[] = [
   {
+    company: "Eudo",
+    title: "Founding Engineer",
+    period: "2026–Present",
+    visible:
+      "Building Eudo, an AI notetaker that learns your work and the people in it — capturing every meeting locally (no meeting bot) and using LLMs to track what matters across meetings over time. Owned real-time audio and transcription, backend reliability and security, AI features, and product. 59 PRs and 184 commits in the first five months.",
+    bullets: [
+      "Cut streaming audio bandwidth to a third by resampling 48 kHz → 16 kHz with anti-alias filtering before downsampling, with client-declared sample rates and a side-by-side test harness",
+      "Improved transcription accuracy by passing participant, company, and email-domain names to AssemblyAI as key terms; built a safety watchdog so runaway audio capture stops cleanly on its own",
+      "Made meetings resume recording automatically when a participant rejoins, reconnects in Zoom, or restarts the call app — tracking every app using the microphone and ignoring unrelated audio like Spotify",
+      "Found and fixed two production memory leaks in the FastAPI server (orphaned streaming sessions; an Anthropic client created per call, ~858 KB each); closed authentication gaps in participant endpoints and the transcription WebSocket",
+      "Made Google Calendar sync incremental via change tokens (syncToken) with a failure mode that never misses a change; automated Alembic migrations on Render pre-deploy; modeled the meeting lifecycle as three state machines",
+      "Built Relationship Arcs: an LLM feature tracking how themes and open loops with each contact evolve across meetings — append-only history, Python-side model constraints, and row-level DB locks",
+      "Upgraded chat and prep to Claude Sonnet with visible thinking summaries, an animated thinking indicator, stop button, and auto-scroll; built proof-of-concept MCP servers (meeting-history search via browser OAuth; a Slack MCP server running scans without a human in the loop)",
+      "Shipped public share links (128-bit tokens; Recap/Notes/Transcript/Live tabs; partial unique index preventing duplicate live links), meeting alerts with auto-recording on click, accent-insensitive search incl. emails, and contacts via the Google People API",
+      "Replaced in-house analytics with PostHog using an event allowlist so user content can't leak into tracking; blocked in-app text from LogRocket; wrote a 6-month synthetic meeting generator for demos; released v0.0.31–v0.0.46",
+    ],
+  },
+  {
     company: "tEQuitable",
     title: "Engineering Lead",
-    period: "2020–Present",
+    period: "2020–2025",
     visible:
       "Led all engineering at a YC-backed workplace equity startup serving ~50 enterprise clients and ~200,000 employees. Three-person team. Owned the architecture, roadmap, deployments, and hiring.",
     bullets: [
