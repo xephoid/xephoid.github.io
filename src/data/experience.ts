@@ -33,7 +33,7 @@ export const experience: Role[] = [
       "Led all engineering at a YC-backed workplace equity startup serving ~50 enterprise clients and ~200,000 employees. Three-person team. Owned the architecture, roadmap, deployments, and hiring.",
     bullets: [
       "Built and maintained a React + Node.js + PostgreSQL platform on GCP and Heroku",
-      "Built the customer admin dashboard (teq-admin-dev) from scratch — Auth0 login, Chart.js analytics, a super-admin view, and a self-serve onboarding flow letting customers configure their own instance with auto-generated engagement emails; shipped with Cypress tests on CircleCI",
+      "Built the customer admin dashboard from scratch — Auth0 login, Chart.js analytics, a super-admin view, and a self-serve onboarding flow letting customers configure their own instance with auto-generated engagement emails; shipped with Cypress tests on CircleCI",
       "Automated a 6–8 hour manual daily report pipeline down to under 2 hours, freeing the customer success team to focus on research and new remediation content",
       "Owned authentication and security: pre-authenticated engagement links, SMS and verification-code login, an Auth0 custom domain, maintenance mode, cross-origin failover for blocked third-party scripts, admin-key hardening, audit logging, a WAF cutover, and GDPR privacy updates including a legal review for an enterprise customer",
       "Moved learning content out of hard-coded lists and into the database, wiring in a headless WordPress CMS (webhooks) so content staff could publish modules without engineering",
