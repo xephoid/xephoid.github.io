@@ -33,8 +33,11 @@ export const experience: Role[] = [
       "Led all engineering at a YC-backed workplace equity startup serving ~50 enterprise clients and ~200,000 employees. Three-person team. Owned the architecture, roadmap, deployments, and hiring.",
     bullets: [
       "Built and maintained a React + Node.js + PostgreSQL platform on GCP and Heroku",
-      "Automated a 6-8 hour manual report generation process down to under 2 hours, freeing the customer success team to focus on research and new remediation content",
-      "Built a phone survey tool using Twilio and Google Cloud Functions that captured employee testimonials used as evidence of service impact in client reports",
+      "Built the customer admin dashboard (teq-admin-dev) from scratch — Auth0 login, Chart.js analytics, a super-admin view, and a self-serve onboarding flow letting customers configure their own instance with auto-generated engagement emails; shipped with Cypress tests on CircleCI",
+      "Automated a 6–8 hour manual daily report pipeline down to under 2 hours, freeing the customer success team to focus on research and new remediation content",
+      "Owned authentication and security: pre-authenticated engagement links, SMS and verification-code login, an Auth0 custom domain, maintenance mode, cross-origin failover for blocked third-party scripts, admin-key hardening, audit logging, a WAF cutover, and GDPR privacy updates including a legal review for an enterprise customer",
+      "Moved learning content out of hard-coded lists and into the database, wiring in a headless WordPress CMS (webhooks) so content staff could publish modules without engineering",
+      "Integrated HubSpot, Box API, SAP SuccessFactors, and a phone survey tool (Twilio + Google Cloud Functions) capturing employee testimonials used as evidence of service impact in client reports",
       "Integrated OpenAI embeddings to surface relevant content to employees, helping users find solutions to workplace issues without needing human intervention",
       "Hired, onboarded, and mentored 2 junior engineers; ran daily standups and quarterly roadmap planning",
       "Maintained 70% customer retention across a 3-person engineering org",
